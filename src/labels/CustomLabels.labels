@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Already_Synced_Checkbox</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Already Synced Checkbox</shortDescription>
+        <value>Already Synced</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_Api_Button</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel Api Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Color_Pattern</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Color Pattern</shortDescription>
+        <value>^#([A-Fa-f0-9]{6})$</value>
+    </labels>
+    <labels>
+        <fullName>EndTime_Header</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>EndTime Header</shortDescription>
+        <value>End Time</value>
+    </labels>
+    <labels>
+        <fullName>Event_Already_Sync_Toast</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Already Sync Toast</shortDescription>
+        <value>Current Event is already synced with an Existing Guide.</value>
+    </labels>
+    <labels>
+        <fullName>Event_Overview_HTML_Msg</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Overview HTML Msg</shortDescription>
+        <value>Please Provide Overview HTML value before sync.</value>
+    </labels>
+    <labels>
+        <fullName>GuideDescription_Header</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GuideDescription Header</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>GuideName_Header</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GuideName Header</shortDescription>
+        <value>Guidebook Name</value>
+    </labels>
+    <labels>
+        <fullName>Guidebook_Helptext</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guidebook Helptext</shortDescription>
+        <value>Please select one of the guide from list and press sync button.</value>
+    </labels>
+    <labels>
+        <fullName>Guidebook_Name</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guidebook</shortDescription>
+        <value>Guidebook Name :</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_email_toast_text</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invalid email toast text</shortDescription>
+        <value>Please enter valid email address.</value>
+    </labels>
+    <labels>
+        <fullName>Invitation_toast_text</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invitation toast text</shortDescription>
+        <value>Invitation Email has been sent. Please check your email.</value>
+    </labels>
+    <labels>
+        <fullName>Invite</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invite</shortDescription>
+        <value>Invite</value>
+    </labels>
+    <labels>
+        <fullName>New_Guide</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Guide</shortDescription>
+        <value>New Guide</value>
+    </labels>
+    <labels>
+        <fullName>New_Guide_Creation_Toast</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New_Guide_Creation_Toast</shortDescription>
+        <value>New Guide Created Successfully</value>
+    </labels>
+    <labels>
+        <fullName>Request_pending_toast_text</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Request pending toast text</shortDescription>
+        <value>Error Occured : Your request is already pending.Please Contact to Fonteva Support.</value>
+    </labels>
+    <labels>
+        <fullName>Required_field_toast_text</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required field toast text</shortDescription>
+        <value>Please enter Required fields value.</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>StartTime_Header</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>StartTime Header</shortDescription>
+        <value>Start Time</value>
+    </labels>
+    <labels>
+        <fullName>Sync_With_New_Guide_Checkbox</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sync With New Guide Checkbox</shortDescription>
+        <value>Sync With New Guide</value>
+    </labels>
+    <labels>
+        <fullName>Sync_button_label</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sync button</shortDescription>
+        <value>Sync</value>
+    </labels>
+    <labels>
+        <fullName>Sync_success_toast_text</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sync success toast text</shortDescription>
+        <value>Record Updated Successfully.</value>
+    </labels>
+    <labels>
+        <fullName>No_Record_Found</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Record Found</shortDescription>
+        <value>No Guide Found. Please Create a New Guide.</value>
+    </labels>
+    <labels>
+        <fullName>Event_Room_Guide</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event_Room_Guide</shortDescription>
+        <value>Please select the room which is associated to same event</value>
+    </labels>
+    <labels>
+        <fullName>Guidebook_Speaker</fullName>
+        <categories>Guidebook</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guidebook Speaker</shortDescription>
+        <value>Speakers</value>
+    </labels>
+	 <labels>
+        <fullName>Create_Guide_for_Membership</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Guide for Membership</shortDescription>
+        <value>Membership Guide</value>
+    </labels>
+    <labels>
+        <fullName>Error_Creating_Guide</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Creating Guide</shortDescription>
+        <value>Error On Creating Membership Guide</value>
+    </labels>
+    <labels>
+        <fullName>Generate_Button</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Generate Button</shortDescription>
+        <value>Generate</value>
+    </labels>
+    <labels>
+        <fullName>Guide_Created</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guide Created</shortDescription>
+        <value>Membership Guide is Created</value>
+    </labels>
+    <labels>
+        <fullName>Guide_Description_Membership</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guide Description Membership</shortDescription>
+        <value>Guide Description</value>
+    </labels>
+    <labels>
+        <fullName>Guide_Name_Membership</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Guide Name Membership</shortDescription>
+        <value>Guide Name</value>
+    </labels>
+    <labels>
+        <fullName>Provide_Description</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Provide Description</shortDescription>
+        <value>Provide Guidebook Description</value>
+    </labels>
+    <labels>
+        <fullName>Provide_Guide_Name</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Provide Guide Name</shortDescription>
+        <value>Provide the Guide Name</value>
+    </labels>
+    <labels>
+        <fullName>Select_Community_Site</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select  Community Site</shortDescription>
+        <value>Select Community Site</value>
+    </labels>
+    <labels>
+        <fullName>Select_Options</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Options</shortDescription>
+        <value>---Select One---</value>
+    </labels>
+    <labels>
+        <fullName>Select_Site</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Site</shortDescription>
+        <value>Select Site</value>
+    </labels>
+    <labels>
+        <fullName>Fonteva_Mobile_Filter</fullName>
+        <categories>Guidebook_Membership</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fonteva Mobile Filter</shortDescription>
+        <value>FontevaMobile</value>
+    </labels>
+</CustomLabels>

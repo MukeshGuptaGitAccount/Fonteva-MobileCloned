@@ -1,0 +1,34 @@
+<template>
+        <c-pfm-toast data-name="generalToast" ></c-pfm-toast>
+      <div if:false={hideTable}>
+    <div class="slds-p-top_xx-large">
+            <lightning-card title="Create Admin For Organization" icon-name="action:add_contact" >
+                    <div class="slds-m-around_medium ">    
+                            <div class="slds-p-bottom_small">
+                                      <lightning-input type="text" label="First Name" value={data} required class="FirstName">                                           
+                                    </lightning-input>
+                            </div>
+                            <div class="slds-p-bottom_small">
+                                    <lightning-input type="text" label="Last Name" value={data} class="LastName" required>
+                                    </lightning-input>
+                            </div>
+                            <div class="slds-p-bottom_small">
+                                    <lightning-input type="text" label="Email" value={data} class="Email" required>
+                                    </lightning-input>
+                            </div>       
+                </div>
+            </lightning-card>
+            <div class="slds-float--right slds-p-right_medium">
+                    <c-pfm-button type="outline" label={label.CancelButton} onclick={cancelPopUp}></c-pfm-button>&nbsp;&nbsp;&nbsp;
+                    <c-pfm-button type="success"  label={label.Invite}  onclick={invitation} ></c-pfm-button>
+            </div>
+        </div>
+   </div>
+            <div >
+             <template if:true={loaded} >
+                    <div  >
+                            <c-pfm-loader class="pfm-guidebook" size="small" alt-text="Loading" start-on-load="true" ></c-pfm-loader>
+                     </div>
+               </template>
+            </div>
+</template> 

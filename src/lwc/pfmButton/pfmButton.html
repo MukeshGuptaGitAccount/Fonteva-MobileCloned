@@ -1,0 +1,20 @@
+<template>
+	<button class={classes} type={isSubmit} onclick={startLoader} name={name} data-group={group} disabled={disabled}>
+		<template if:true={leftIcon}>
+			<lightning-icon icon-name={icon} size={iconSize} variant={iconVariant}></lightning-icon>
+		</template>
+		<template if:true={label}>
+			<span>{label}</span>
+		</template>
+		<template if:true={rightIcon}>
+			<lightning-icon icon-name={icon} size={iconSize} variant={iconVariant}></lightning-icon>
+		</template>
+		<template if:false={disableLoader}>
+			<div class="pfm-button_loader">
+				<div class="pfm-button_dot"></div>
+				<div class="pfm-button_dot"></div>
+				<div class="pfm-button_dot"></div>
+			</div>
+		</template>
+	</button>
+</template>

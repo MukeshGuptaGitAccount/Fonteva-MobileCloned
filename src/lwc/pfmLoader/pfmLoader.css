@@ -1,0 +1,77 @@
+.pfm-loader {
+    display: none;
+}
+.pfm-loader.js-loader.pfm-loader_full {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.pfm-loader.js-loader {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.pfm-loader.js-loader .pfm-loader_background {
+    background-color: white;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.pfm-loader .pfm-loader_content {
+    display: flex;
+}
+
+.pfm-loader.js-loader .pfm-loader_content {
+    z-index: 1;
+}
+
+
+
+.pfm-loader_content .pfm-loader_dot {
+    border-radius: 50%;
+}
+
+.pfm-loader_small .pfm-loader_content .pfm-loader_dot {
+	height: 5px;
+	width: 5px;
+}
+
+
+.pfm-loader_medium .pfm-loader_content .pfm-loader_dot {
+    height: 7.5px;
+    width: 7.5px;
+}
+
+.pfm-loader_large .pfm-loader_content .pfm-loader_dot {
+    height: 10px;
+    width: 10px;
+}
+
+.pfm-loader_small .pfm-loader_dot + .pfm-loader_dot {
+    margin-left: .25rem;
+}
+
+.pfm-loader_medium .pfm-loader_content .pfm-loader_dot + .pfm-loader_dot {
+	margin-left: .375rem;
+}
+
+.pfm-loader_large .pfm-loader_content .pfm-loader_dot + .pfm-loader_dot {
+    margin-left: .5rem;
+}
+
+.pfm-loader_content .pfm-loader_dot:nth-of-type(1) { background-color: var(--lwc-colorBackgroundButtonBrandHover, #195594); filter: brightness(100%) }
+.pfm-loader_content .pfm-loader_dot:nth-of-type(2) { background-color: var(--lwc-colorBackgroundButtonBrandHover, #195594); filter: brightness(150%) }
+.pfm-loader_content .pfm-loader_dot:nth-of-type(3) { background-color: var(--lwc-colorBackgroundButtonBrandHover, #195594); filter: brightness(200%) }

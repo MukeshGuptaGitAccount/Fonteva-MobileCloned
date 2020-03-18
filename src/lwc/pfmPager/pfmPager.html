@@ -1,0 +1,26 @@
+<template>
+    <div class={classes}>
+        <div class="pfm-pager_first">
+            <a onclick={onFirst} class={firstButtonCssClasses} data-label="leftAllPager">
+                <lightning-icon icon-name="utility:chevronleft" size="x-small" alternative-text="prev"></lightning-icon>
+                <lightning-icon icon-name="utility:chevronleft" size="x-small" alternative-text="prev"></lightning-icon>
+            </a>
+        </div>
+        <a onclick={onPrev} class={prevButtonCssClasses} data-label="leftPager">
+            <lightning-icon icon-name="utility:chevronleft" size="x-small" alternative-text="prev"></lightning-icon>
+        </a>
+        <template for:each={pageListToDisplay} for:item="pageList" for:index="index" key={pageList.pageNumber}>
+            <a key={pageList.pageNumber} if:true={pageList.isCurrentPage} class="js-active" onclick={switchToPage} data-label="pageSelected" data-page={pageList.pageNumber}>{pageList.pageNumber}</a>
+            <a key={pageList.pageNumber} if:false={pageList.isCurrentPage} onclick={switchToPage} data-label="pageSelectable" data-page={pageList.pageNumber}>{pageList.pageNumber}</a>
+        </template>
+        <a onclick={onNext} class={nextButtonCssClasses} data-label="rightPager">
+            <lightning-icon icon-name="utility:chevronright" size="x-small" alternative-text="next"></lightning-icon>
+        </a>
+        <div class="pfm-pager_last">
+            <a onclick={onLast} class={lastButtonCssClasses} data-label="rightAllPager">
+                <lightning-icon icon-name="utility:chevronright" size="x-small" alternative-text="prev"></lightning-icon>
+                <lightning-icon icon-name="utility:chevronright" size="x-small" alternative-text="prev"></lightning-icon>
+            </a>
+        </div>
+    </div>
+</template>

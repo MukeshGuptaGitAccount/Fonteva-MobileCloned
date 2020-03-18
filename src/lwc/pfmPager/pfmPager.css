@@ -1,0 +1,109 @@
+.pfm-pager {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--lwc-spacing-large, 1.5rem);
+}
+
+.pfm-pager_first,
+.pfm-pager_last {
+    position: relative;
+}
+
+.pfm-pager_first a > *:first-of-type,
+.pfm-pager_last a > *:first-of-type {
+    position: relative;
+    left: 2.5px;
+}
+
+.pfm-pager_first a > *:last-of-type,
+.pfm-pager_last a > *:last-of-type {
+    position: absolute;
+    left: 10.5px;
+}
+
+.pfm-pager_first {
+    margin-right: .5rem;
+}
+
+
+.pfm-pager_last {
+    margin-left: .5rem;
+}
+
+.pfm-pager a {
+    border: 1px solid var(--lwc-colorBorderButtonDefault, #dddbda);
+    border-right: none;
+    height: 40px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.pfm-pager a:hover,
+.pfm-pager a.js-active {
+    border-color: var(--lwc-colorBackgroundBrand, rgb(0, 112, 210));
+    background-color: var(--lwc-colorBackgroundBrand, rgb(0, 112, 210));
+    text-decoration: none;
+    color: var(--lwc-colorTextButtonBrandHover, white);
+}
+
+.pfm-pager a:first-of-type {
+    padding: 0 .75rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pfm-pager a:last-of-type {
+    padding: 0 .75rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-right: 1px solid var(--lwc-colorBorderButtonDefault, #dddbda);
+}
+
+.pfm-pager a[data-label="rightPager"] > *,
+.pfm-pager a[data-label="leftPager"] > *,
+.pfm-pager_first a > *,
+.pfm-pager_last a > * {
+    transform: scale(.8);
+}
+
+.pfm-pager a.js-disabled {
+    pointer-events: none;
+    color: #D4D4D4;
+    border: 1px solid #D4D4D4;
+    background-color: #D4D4D4;
+    cursor: default;
+}
+
+.pfm-pager a.js-disabled * {
+    opacity: .5;
+}
+
+
+.pfm-pager.pfm-pager_portal a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin: 0 var(--lwc-spacing-xx-small, .25rem);
+}
+
+.pfm-pager.pfm-pager_portal .pfm-pager_first {
+    margin-right: 0;
+}
+
+.pfm-pager.pfm-pager_portal .pfm-pager_last {
+    margin-left: 0;
+}
+
+.pfm-pager.pfm-pager_portal a:first-of-type:hover,
+.pfm-pager.pfm-pager_portal a:last-of-type:hover {
+    background-color: transparent;
+}
+
+.pfm-pager.pfm-pager_portal a.js-disabled {
+    opacity: .8;
+    background-color: transparent;
+}

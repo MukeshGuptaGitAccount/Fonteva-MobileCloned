@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This is batch size Settings for each batch</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Api_Key__c</fullName>
+        <description>Api Key for Guidebook</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Api Key for Guidebook</inlineHelpText>
+        <label>Api Key</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Admin_Guidebook__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Admin Guidebook</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Organization_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Organization ID</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>GuideBook Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

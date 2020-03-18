@@ -1,0 +1,22 @@
+:host {
+}
+
+.pfm-cmp-container.pfm-container-theme_brand {
+    background-color: var(--lwc-colorBackgroundButtonBrand, #2574A9);
+}
+
+.pfm-cmp-container.pfm-container-theme_success {
+    background-color: #016538;
+}
+
+.pfm-cmp-container.pfm-container-theme_danger {
+    background-color: #a61a14;
+}
+
+.pfm-cmp-container.pfm-container-theme_shade {
+    background-color: #F7F8F7;
+}
+
+.pfm-cmp-container.pfm-container-theme_shade-dark {
+    background-color: #656665;
+}

@@ -1,0 +1,30 @@
+<apex:page StandardController="EventApi__Event__c" sidebar="false"  showHeader="false" standardStylesheets="false" lightningStylesheets="true">
+    <apex:slds />   
+    <apex:form >
+        
+        <apex:includeLightning />
+        <!--Lightning Container-->
+        <div id="LightningContainer" class="slds-m-left_xx-large slds-m-top_medium"/>
+        <script>
+        //Create Lightning Component
+        $Lightning.use("MobileApi:FontevaMobileApp", function() {
+            $Lightning.createComponent("MobileApi:PfmAuraComponent",
+                                       {recordId : '{!EventApi__Event__c.Id}', vfMsgMethod : getMessage}, 
+                                       "LightningContainer", function(component) {
+                                           
+                                       });
+        });
+        
+        //Function to call from Lightning Component
+        
+        function getMessage(msg){
+            if(msg == 'Cancel'){
+                window.parent.parent.postMessage('cancel', '*');  
+            }else{
+                window.parent.parent.postMessage('close', '*');  
+            }
+        }
+        </script>
+        
+    </apex:form>
+</apex:page>

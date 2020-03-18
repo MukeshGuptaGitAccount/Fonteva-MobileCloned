@@ -1,0 +1,121 @@
+:host {
+    width: calc(100% - 2rem);
+    max-width: 800px;
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+}
+
+.pfm-toast + .pfm-toast {
+    margin-top: .5rem;
+}
+
+.pfm-toast {
+    border: 1px solid var(--lwc-colorBorder);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0 8px 6px -6px #888888;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(calc(-100% - .5rem));
+    transition: transform .25s cubic-bezier(0.9, -0.01, 0.2, 1) .125s, opacity .25s cubic-bezier(1, 0, 1, 1);
+}
+
+.pfm-toast .pfm-toast_content {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    display: flex;
+}
+
+.pfm-toast .pfm-toast_action {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+
+.pfm-toast .pfm-toast_image {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    align-self: center;
+}
+
+.pfm-toast .pfm-toast_message {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+
+/* THEME */
+
+.pfm-toast.pfm-toast_success,
+.pfm-toast.pfm-toast_danger {
+    color: white;
+}
+.pfm-toast.pfm-toast_warning {
+    color: #353535;
+}
+
+.pfm-toast.pfm-toast_success {
+    background-color: #04844b;
+    border-color: #016538;
+}
+
+.pfm-toast.pfm-toast_warning {
+    background-color: #FFB75D;
+    border-color: #e0a253;
+}
+
+.pfm-toast.pfm-toast_danger {
+    background-color: #c23934;
+    border-color: #a61a14;
+}
+
+.pfm-toast.pfm-toast_default .pfm-toast_progress {
+    background-color: var(--lwc-colorBackgroundButtonBrand);
+}
+.pfm-toast.pfm-toast_success .pfm-toast_progress {
+    background-color: #016538;
+}
+.pfm-toast.pfm-toast_danger .pfm-toast_progress {
+    background-color: #a61a14;
+}
+.pfm-toast.pfm-toast_warning .pfm-toast_progress {
+    background-color: #e0a253;
+}
+
+/* ANIMATION */
+
+.pfm-toast_progress {
+    position: absolute;
+    height: 6px;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+}
+
+.pfm-toast.js-toast_progress .pfm-toast_progress {
+    width: 100%;
+    transition-property: width;
+    transition-delay: .5s;
+    transition-timing-function: linear;
+}
+
+
+.pfm-toast.js-toast_transition {
+	transform: translateY(0%);
+	opacity: 1;
+}
+
+.pfm-toast.js-toast_transition-hide {
+	height: 0px;
+	overflow: hidden;
+	opacity: 0;
+	transition: height .25s cubic-bezier(0.9, -0.01, 0.2, 1) .25s,
+				opacity .25s cubic-bezier(1, 0, 1, 1),
+				padding .25s cubic-bezier(0.9, -0.01, 0.2, 1) .25s;
+}

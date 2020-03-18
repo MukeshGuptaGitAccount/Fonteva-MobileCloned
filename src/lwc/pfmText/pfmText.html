@@ -1,0 +1,58 @@
+<template>
+    <!-- type: body. is default -->
+    <template if:false={isHeader}>
+        <template if:false={isLabel}>
+            <p class={classes}>
+                <slot></slot>
+                {text}
+            </p>
+        </template>
+        <template if:true={isLabel}>
+            <abbr if:true={required} class="slds-required" title="required">*</abbr>
+            <label class="slds-form-element__label slds-no-flex">
+                <slot></slot>
+                {text}
+            </label>
+        </template>
+    </template>
+
+    <!-- type: heading -->
+    <template if:true={isHeader}>
+        <template if:true={isH1}>
+            <h1 class={classes}>
+                <slot></slot>
+                {text}
+            </h1>
+        </template>
+        <template if:true={isH2}>
+            <h2 class={classes}>
+                <slot></slot>
+                {text}
+            </h2>
+        </template>
+        <template if:true={isH3}>
+            <h3 class={classes}>
+                <slot></slot>
+                {text}
+            </h3>
+        </template>
+        <template if:true={isH4}>
+            <h4 class={classes}>
+                <slot></slot>
+                {text}
+            </h4>
+        </template>
+        <template if:true={isH5}>
+            <h5 class={classes}>
+                <slot></slot>
+                {text}
+            </h5>
+        </template>
+        <template if:true={isH6}>
+            <h6 class={classes}>
+                <slot></slot>
+                {text}
+            </h6>
+        </template>
+    </template>
+</template>

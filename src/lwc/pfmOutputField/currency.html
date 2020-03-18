@@ -1,0 +1,13 @@
+<template>
+	<slot></slot>
+	<span data-label="value">
+	<span if:true={isNegative}>
+		(
+	</span>
+	<lightning-formatted-number value={value} format-style="currency" currency-code={currencyIsoCode} currency-display-as={currencySymbolType}>
+	</lightning-formatted-number>
+	<span if:true={isNegative}>
+		)
+	</span>
+	</span>
+</template>

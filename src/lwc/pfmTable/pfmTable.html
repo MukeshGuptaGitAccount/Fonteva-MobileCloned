@@ -1,0 +1,33 @@
+<template>
+	<template if:true={loading}>
+		<lightning-spinner alternative-text="Loading"></lightning-spinner>
+	</template>
+	<div class="pfm-table slds-border_top">
+		<c-pfm-base-table
+				key-field={keyField}
+				columns={columns}
+				data={tablePagedData}
+				resize-column-disabled={resizeColumnDisabled}
+				draft-values={draftValues}
+				hide-checkbox-column={hideCheckboxColumn}
+				errors={errors}
+				selected-rows={selectedRows}
+				onrowselection={handleRowSelection}
+				sorted-by={sortedBy}
+				sorted-direction={sortedDirection}
+				default-sort-direction={defaultSortDirection}
+				oncellchange={handleCellChange}
+				oncancel={handleCancelAction}
+				onrowaction={handleRowAction}
+				onsave={handleSaveAction}
+				onsort={handleSortAction}
+				max-row-selection={maxRowSelection}>
+		</c-pfm-base-table>
+		<c-pfm-pager if:true={showPageSet}
+		             number-of-pages={numberOfPages}
+		             page-size={pageSize}
+		             backend={backend}
+		             onpagechanged={pageChanged}>
+		</c-pfm-pager>
+	</div>
+</template>

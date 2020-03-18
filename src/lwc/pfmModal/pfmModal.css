@@ -1,0 +1,27 @@
+.slds-modal__header {
+    padding: 1rem 2rem;
+}
+
+.pfm-modal_portal .slds-button.slds-modal__close {
+    top: 0;
+    right: 0;
+    transform: scale(.75);
+}
+
+.pfm-modal_portal .slds-modal__header {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom: none;
+}
+
+.pfm-modal_portal .slds-modal__footer {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top: none;
+    background-color: white;
+    text-align: center;
+}
+
+.pfm-modal_portal .slds-modal__content {
+    position: relative;
+}

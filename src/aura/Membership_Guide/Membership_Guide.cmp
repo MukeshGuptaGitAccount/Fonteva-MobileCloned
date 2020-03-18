@@ -1,0 +1,35 @@
+<aura:component access="global"
+                controller="GuidebookRestApiController_MemberShip">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="sitesName" type="List"/>
+    <aura:attribute name="showSpinner" type="boolean" default="false"/>
+    <div class="slds-col slds-medium-size--3-of-4 slds-border--left">
+    <div class="slds-p-around_medium">
+        <lightning:card title="{!$Label.c.Create_Guide_for_Membership}" class="slds-p-top_medium header" >
+            <div class="slds-p-around_medium">
+                <lightning:select label="{!$Label.c.Select_Site}" aura:id="picklistInput"  required="true">
+                    <option value="">{!$Label.c.Select_Options}</option>
+                    <aura:iteration items="{!v.sitesName}" var="siteName">
+                        <option value="{!siteName.Id}" >{!siteName.Name}</option>
+                    </aura:iteration>
+                </lightning:select>
+                <div class="slds-p-top_medium">
+                    <lightning:input label="{!$Label.c.Guide_Name_Membership}" aura:id="textInput" required="true"/> 
+                </div>
+                <div class="slds-p-top_medium">
+                    <lightning:input label="{!$Label.c.Guide_Description_Membership}" aura:id="guideDes" required="true"/> 
+                </div>
+                <div class="slds-p-top_medium">
+                    <Framework:Button aura:id="button" label="{!$Label.c.Generate_Button}"  onClickAction="{!c.handleClick}"></Framework:Button>
+                </div >
+            </div>
+            <aura:if isTrue="{!v.showSpinner}">
+                <div>
+                    <lightning:spinner alternativeText="Loading" size="medium" />
+                </div>
+            </aura:if>
+        </lightning:card>
+    </div>
+        <Framework:Toast aura:id="toastMessages" />
+    </div>
+</aura:component>

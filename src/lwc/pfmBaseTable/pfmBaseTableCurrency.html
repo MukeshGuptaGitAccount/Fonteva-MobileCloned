@@ -1,0 +1,10 @@
+<template>
+	<span class="fon-custom-cell" if:false={typeAttributes.isLeftAligned}>
+		<c-pfm-output-field value={value} type="currency" currency-iso-code={typeAttributes.currencyIsoCode} is-multi-currency-org={typeAttributes.isMultiCurrencyOrg}>
+		</c-pfm-output-field>
+	</span>
+	<span class="fon-custom-cell slds-float_right" if:true={typeAttributes.isLeftAligned}>
+		<c-pfm-output-field value={value} type="currency" currency-iso-code={typeAttributes.currencyIsoCode} is-multi-currency-org={typeAttributes.isMultiCurrencyOrg}>
+		</c-pfm-output-field>
+	</span>
+</template>

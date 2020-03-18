@@ -1,0 +1,49 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" controller="GuidebookApiController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="GuidebookModal" type="Boolean" default="false" /> 
+    <aura:attribute name="AdminModal" type="Boolean" default="false" />
+    <aura:attribute name="isClassic" type="Boolean" default="false" /> 
+    <aura:attribute name="isLightning" type="Boolean" default="false" /> 
+     <aura:attribute name="vfMsgMethod" type="object" />
+    <aura:attribute name="recordId" type="Id" />    
+     <aura:attribute name="uiTheme" type="String" />
+     <aura:attribute name="loadSpinner" type="Boolean" default="false" /> 
+    
+     <aura:if isTrue="{!v.loadSpinner}">
+    <lightning:spinner variant="brand" size="large" alternativeText="Loading"/>
+    </aura:if>
+     <aura:if isTrue="{!v.isLightning}">
+    <ltng:require styles="{!$Resource.Model_Width_Expand + '/Model_Width_Expand.css'}"/>
+        <div>
+            <aura:if isTrue="{!v.GuidebookModal}">
+                <div >
+                    <c:guidebookCmpPFM recordId="{!v.recordId}" oncloseQuickAction="{!c.closeModalWindow}" onrecordChange="{!c.refreshView}" 
+                                       oncallToApiKeyWindow="{!c.openApiKey}" ></c:guidebookCmpPFM>
+                </div>   
+            </aura:if>
+        </div>
+        <div>
+            <aura:if isTrue="{!v.AdminModal}">
+                <c:inviteUser oncloseQuickAction="{!c.closeModalWindow}" ></c:inviteUser>
+            </aura:if>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isClassic}">
+        <div>
+            <aura:if isTrue="{!v.GuidebookModal}">
+                
+                <div style="width:90%;" >
+                    <c:guidebookCmpPFM recordId="{!v.recordId}" oncloseQuickAction="{!c.closeModalWindow}" 
+                                       ></c:guidebookCmpPFM>
+                </div>  
+                
+            </aura:if>
+        </div>
+        <div style="width:95%;">
+            <aura:if isTrue="{!v.AdminModal}">
+                <c:inviteUser oncloseQuickAction="{!c.closeModalWindow}" ></c:inviteUser>
+            </aura:if>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <fields>
+        <fullName>Guide__c</fullName>
+        <externalId>true</externalId>
+        <label>Guide ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Custom_List_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom List Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+
+    <webLinks>
+        <fullName>Fonteva_Mobile</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Fonteva Mobile</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>(function() {
+    var width = 1000;
+    var height = 550;
+    var title = &quot;&quot;;
+    
+    var box = new SimpleDialog(&quot;salesforce&quot; + Math.random(), true);
+    box.setTitle(title);
+    box.displayX = true;
+    box.isMovable = false;
+    box.createDialog();
+    box.setWidth(width);
+    // set your html content here
+    box.setContentInnerHTML(
+    
+    &#39;&lt;iframe src=&quot;/apex/MobileApi__FontevaMobilePage?Id={!EventApi__Event__c.Id}&quot; style=&quot;border:none;&quot; width=&quot;100%&quot; height=&quot;&#39;+ (height - 30)+&#39;px&quot; /&gt;&#39;
+    );
+    //set the height of the modal
+    box.dialog.children[1].style.height = height + &#39;px&#39;;
+    box.show();
+    document.body.style.overflow=&#39;hidden&#39;;
+    
+    //if displayX is set to true, then override standard close event by this code
+    box.dialog.getElementsByClassName(&#39;dialogClose&#39;)[0].onclick = function() {
+    box.hide();
+    document.body.style.overflow=&#39;auto&#39;;
+    // you can add code to reload the page or redirect to another page
+    };
+    
+    // if you want to be able to close the modal from the Visualforce page
+    window.addEventListener(&#39;message&#39;, function(event){
+    if (event.data === &#39;close&#39;){
+    box.hide();
+    location.reload();																						
+    }else{
+        box.hide();																
+        }
+    });
+        
+    })();</url>
+    </webLinks>
+    
+</CustomObject>

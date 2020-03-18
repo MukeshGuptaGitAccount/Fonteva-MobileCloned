@@ -1,0 +1,10 @@
+.THIS .slds-modal__container{
+
+    max-width: 70rem !important;
+    width:80% !important;
+}
+.THIS .slds-backdrop_open{
+    visibility: visible !important;
+    /* opacity: 1; */
+    transition: opacity .4s linear !important;
+ }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Attendee_id__c</fullName>
+        <description>Holds the attendee id from the lookup Attendee.</description>
+        <externalId>false</externalId>
+        <formula>EventApi__Attendee__r.Attendee_Id__c</formula>
+        <inlineHelpText>Holds the attendee id from the lookup Attendee.</inlineHelpText>
+        <label>Attendee ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Guide__c</fullName>
+        <externalId>false</externalId>
+        <formula>EventApi__Attendee__r.Guide__c</formula>
+        <label>Guide ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <description>Holds the name of the Registration Item.</description>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Schedule_Item_id__c</fullName>
+        <description>Holds the session id from the schedule item lookup.</description>
+        <externalId>false</externalId>
+        <formula>EventApi__Schedule_Item__r.Session_Id__c</formula>
+        <inlineHelpText>Holds the session id from the schedule item lookup.</inlineHelpText>
+        <label>Schedule Item ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Registration ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+</CustomObject>

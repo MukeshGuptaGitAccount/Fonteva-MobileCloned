@@ -1,0 +1,10 @@
+<template>
+	<template if:true={valLabel}>
+		<c-pfm-text type="label" required={required}>
+			{label}
+		</c-pfm-text>
+	</template>
+	<lightning-helptext content={content}
+	                    class="popover"
+	                    icon-name="utility:info"></lightning-helptext>
+</template>

@@ -1,0 +1,97 @@
+:host {
+    display: contents;
+}
+
+*.pfm-text_inline {
+    display: inline-block;
+}
+
+h1.pfm-text-heading_x-large {
+    font-size: 2rem;
+}
+
+h2.pfm-text-heading_large {
+    font-size: 1.5rem;
+}
+
+h3.pfm-text-heading_medium {
+    font-size: 1.125rem;
+}
+
+h4.pfm-text-heading_small{
+    font-size: .875rem;
+}
+
+h5.pfm-text-heading_x-small,
+.pfm-text-body_x-small {
+    font-size: .75rem;
+}
+
+h6.pfm-text-heading_xx-small,
+.pfm-text-body_xx-small {
+    font-size: .625rem;
+}
+
+.pfm-text-body_x-large {
+    font-size: 1.25rem;
+}
+
+.pfm-text-body_large {
+    font-size: 1.125rem;
+}
+
+.pfm-text-body_medium {
+    font-size: 1rem;
+}
+
+.pfm-text-body_small {
+    font-size: .8125rem;
+}
+
+
+/* Themed Colors*/
+
+:host(.pfm-theme_success),
+:host(.pfm-theme_shade-dark),
+:host(.pfm-theme_danger) {
+    color: white;
+}
+
+:host(.pfm-theme_brand) {
+    color: var(--lwc-colorTextButtonBrand, white);
+}
+
+/* Font Weight */
+
+label.slds-form-element__label,
+*.pfm-font-weight_bold {
+    font-weight: 700;
+}
+
+*.pfm-font-weight_regular {
+    font-weight: 400;
+}
+
+*.pfm-font-weight_light {
+    font-weight: 300;
+}
+
+
+/* Colors */
+.pfm-text-color_danger { color: #c23934 }
+.pfm-text-color_warning { color: #ffb75d }
+.pfm-text-color_success { color: #027e46 }
+.pfm-text-color_white { color: #ffffff }
+.pfm-text-color_brand { color: var(--lwc-colorTextBrand) }
+
+label.slds-form-element__label {
+    margin-right: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+
+
+:host(.pfm-text_backend) label {
+    font-weight: 400;
+}

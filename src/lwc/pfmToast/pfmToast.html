@@ -1,0 +1,22 @@
+<template>
+	<template iterator:it={toastList}>
+		<div class={it.value.classes} key={it.value.id} data-id={it.value.id}>
+			<div class="pfm-toast_content">
+				<div class="pfm-toast_action">
+					<a onclick={hide} data-target={it.value.id}>
+						<lightning-icon icon-name="utility:close" size="x-small" variant={it.value.iconColor}></lightning-icon>
+					</a>
+				</div>
+				<div class="pfm-toast_message">
+					<c-pfm-text type="heading" size="medium">
+						{it.value.titleStr}
+					</c-pfm-text>
+					<c-pfm-text>
+						{it.value.messageStr}
+					</c-pfm-text>
+				</div>
+				<div class="pfm-toast_progress" style={it.value.duration}></div>
+			</div>
+		</div>
+	</template>
+</template>

@@ -1,0 +1,67 @@
+<template>
+  <c-pfm-toast data-name="generalToast" ></c-pfm-toast>
+  <div class="slds-p-top_small">
+<article class="slds-card ">
+  <div class="slds-card__header" style="padding: 0%">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container" title="Events">
+          <lightning-icon icon-name="standard:event" alternative-text="Event"></lightning-icon>
+          <span class="slds-assistive-text">Events</span>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title slds-p-top_small">
+          <b>{label.GuidebookHelptext}</b>
+            <c-pfm-button class="slds-float_right slds-p-right_x-small" label={label.NewGuide} type="success" onclick={createNewGuide}
+            disable-loader="false"></c-pfm-button>
+        </h2>
+      </div>
+    </header>
+  </div>
+</article>
+</div>
+<div class="slds-m-top_medium slds-m-bottom_x-large">
+  <h2 class="slds-text-heading_medium slds-m-bottom_medium"></h2>
+  <div if:true={hideCheckbox}>
+    <lightning-input type="checkbox" label={label.AlreadySynced} checked={checkedValue} disabled></lightning-input>
+   
+ <lightning-input type="checkbox" label={label.SyncWithNewGuide} onchange={handleChange}></lightning-input>
+  </div>
+  <div if:true={isChecked} class="slds-grid slds-wrap slds-gutters slds-m-top_small slds-m-bottom_small">
+    <div class="slds-scrollable_y  slds-p-left_small" style="height: 250px;">
+
+         <lightning-datatable
+              key-field="id"
+              data={data}
+              columns={columns}
+              onrowselection={getSelectedName}
+              max-row-selection=1>
+              </lightning-datatable> 
+    </div>
+  </div>
+</div>
+<div class="slds-grid slds-gutters slds-m-top_small">
+  <div class="slds-col_bump-right"><span></span></div>
+  <div if:true={isChecked}>
+    <c-pfm-button type="outline" label={label.CancelButton} onclick={cancelPopUp}></c-pfm-button>
+    &nbsp;
+    <c-pfm-button type="success" label={label.SyncButton} onclick={syncData} disabled={buttonValue} disable-loader="false" ></c-pfm-button>
+  </div>
+</div>
+<div class="exampleHolder">
+  <template if:false={loaded}> </template>
+  <template if:true={loaded} >  
+    <div  >
+   <c-pfm-loader class="pfm-guidebook" size="small" alt-text="Loading" start-on-load="true" ></c-pfm-loader>
+  </div>
+  </template>
+</div>
+
+  <template if:true={showMsg}>
+    <div class="slds-align_absolute-center  slds-p-top_xx-large" style="padding-top: 100px" >
+      <p> <b>{label.NoRecordFound}</b></p>
+    </div>
+  </template>
+
+</template>

@@ -1,0 +1,354 @@
+/*
+    types of transitions:
+        for animations:
+            cubic-bezier(0.9, -0.01, 0.2, 1);
+        for state change:
+            cubic-bezier(1, 0, 1, 1);
+*/
+
+.pfm-button {
+    display: inline-block;
+    position: relative;
+    align-items: center;
+    border-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--lwc-colorTextLink, rgb(37, 116, 169));
+    border-radius: .25rem;
+    min-height: 40px;
+    padding: .5rem 1rem;
+    transition: background-color .125s cubic-bezier(1, 0, 1, 1), color .125s cubic-bezier(1, 0, 1, 1), border-color .125s cubic-bezier(1, 0, 1, 1);
+}
+
+:host(.pfm-button_backend) .pfm-button:not(.pfm-button_link),
+.pfm-button.pfm-button_backend:not(.pfm-button_link) {
+    min-height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.pfm-button:focus {
+    outline: none;
+}
+
+.pfm-button:hover {
+    color: var(--lwc-colorTextLinkHover, rgb(19, 95, 144));
+}
+
+.pfm-button.pfm-button_link {
+    padding: 0;
+    min-height: 0;
+    line-height: 1;
+}
+
+/*
+========================================================
+    Button Types
+========================================================
+*/
+
+
+/* Danger */
+
+.pfm-button.pfm-button_danger {
+    border-color: #c23934;
+    background-color: #c23934;
+    color: white;
+}
+
+.pfm-button.pfm-button_danger:hover {
+    background-color: #a61a14;
+    border-color: #a61a14;
+}
+
+/* Success */
+
+.pfm-button.pfm-button_success {
+    border-color: #04844B;
+    background-color: #04844B;
+    color: white;
+}
+
+.pfm-button.pfm-button_success:hover {
+    background-color: #016538;
+    border-color: #016538;
+}
+
+/* Default */
+
+.pfm-button.pfm-button_default {
+    border-color: var(--lwc-colorBorderButtonBrand, #2574A9);
+    background-color: var(--lwc-colorBackgroundButtonBrand, #2574A9);
+    color: var(--lwc-colorTextButtonBrand, white);
+}
+
+.pfm-button.pfm-button_default:hover {
+    background-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90);
+}
+
+/* Outline */
+
+.pfm-button.pfm-button_outline {
+    border-color: var(--lwc-colorBorder, #D4D4D4);
+    color: var(--lwc-colorTextBrand, #2574A9);
+    background-color: white;
+}
+
+.pfm-button.pfm-button_outline:hover {
+    background-color: var(--lwc-colorBackgroundButtonDefaultHover, rgba(25, 124, 190, 0.05));
+}
+
+/* disabled */
+
+.pfm-button.pfm-button_bare:disabled {
+    pointer-events: none;
+    color: var(--lwc-colorBorder, #D4D4D4);
+    background-color: transparent;
+    border: none;
+}
+
+.pfm-button.pfm-button_outline:disabled {
+    pointer-events: none;
+    color: #D4D4D4;
+    border: 1px solid #D4D4D4;
+    background-color: transparent;
+    opacity: .5;
+}
+
+.pfm-button:disabled:not(.pfm-button_outline):not(.pfm-button_bare) {
+    pointer-events: none;
+    color: white;
+    border: 1px solid #D4D4D4;
+    background-color: #D4D4D4;
+}
+
+.pfm-button:disabled:hover {
+    cursor: none;
+}
+
+/*
+========================================================
+    Themed Colors
+========================================================
+*/
+
+/* Success */
+:host(.pfm-theme_success) .pfm-button.pfm-button_success {
+    border-color: white;
+    background-color: #016538;
+}
+
+:host(.pfm-theme_success) .pfm-button.pfm-button_success:hover {
+    background-color: #04844b;
+}
+
+:host(.pfm-theme_success) .pfm-button.pfm-button_success .pfm-button_loader {
+    background-color: #016538;
+}
+
+:host(.pfm-theme_success) .pfm-button.pfm-button_bare {
+    color: white;
+}
+
+/* Danger */
+
+:host(.pfm-theme_danger) .pfm-button.pfm-button_danger {
+    border-color: white;
+    background-color: #a61a14;
+}
+
+:host(.pfm-theme_danger) .pfm-button.pfm-button_danger:hover {
+    background-color: #c23934;
+}
+
+:host(.pfm-theme_danger) .pfm-button.pfm-button_danger .pfm-button_loader {
+    background-color: #a61a14;
+}
+
+:host(.pfm-theme_danger) .pfm-button.pfm-button_bare {
+    color: white;
+}
+
+/* Brand */
+
+:host(.pfm-theme_brand) .pfm-button.pfm-button_default {
+    border-color: var(--lwc-colorTextButtonBrand, white);
+    background-color: var(--lwc-colorBackgroundButtonBrand, #2574A9);
+}
+
+:host(.pfm-theme_brand) .pfm-button.pfm-button_default:hover {
+    background-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90);
+}
+
+:host(.pfm-theme_brand) .pfm-button.pfm-button_default .pfm-button_loader {
+    background-color: var(--lwc-colorBackgroundButtonBrand, #2574A9);
+}
+
+:host(.pfm-theme_brand) .pfm-button.pfm-button_bare {
+    color: var(--lwc-colorTextButtonBrand, white);
+}
+
+:host(.pfm-theme_success) .pfm-button.pfm-button_outline:hover,
+:host(.pfm-theme_danger) .pfm-button.pfm-button_outline:hover,
+:host(.pfm-theme_brand) .pfm-button.pfm-button_outline:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+
+/*
+========================================================
+    Load
+========================================================
+*/
+
+/* Init */
+
+.pfm-button .pfm-button_loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0;
+    transition: opacity .25s .35s cubic-bezier(1, 0, 1, 1);
+}
+
+.pfm-button.js-load {
+    pointer-events: none;
+}
+
+.pfm-button.js-load span,
+.pfm-button.js-load .slds-icon_container {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: transform .25s cubic-bezier(0.9, -0.01, 0.2, 1), opacity .25s ease-in-out;
+}
+
+.pfm-button.js-load .pfm-button_loader {
+    opacity: 1;
+    border-radius: .25rem;
+}
+
+
+.pfm-button_loader .pfm-button_dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+.pfm-button_dot + .pfm-button_dot {
+    margin-left: .25rem;
+}
+
+
+/*
+========================================================
+    Load Colors
+========================================================
+*/
+
+/* token colors */
+
+.pfm-button_default.pfm-button .pfm-button_loader { background-color: var(--lwc-colorBackgroundButtonBrandHover) }
+.pfm-button_default .pfm-button_loader .pfm-button_dot:nth-of-type(1) { background-color: var(--lwc-colorTextButtonBrandHover); filter: brightness(50%) }
+.pfm-button_default .pfm-button_loader .pfm-button_dot:nth-of-type(2) { background-color: var(--lwc-colorTextButtonBrandHover); filter: brightness(65%) }
+.pfm-button_default .pfm-button_loader .pfm-button_dot:nth-of-type(3) { background-color: var(--lwc-colorTextButtonBrandHover); filter: brightness(80%) }
+
+/* outline, link, and bare colors*/
+
+.pfm-button_bare.pfm-button .pfm-button_loader,
+.pfm-button_link.pfm-button .pfm-button_loader,
+.pfm-button_outline.pfm-button .pfm-button_loader { background-color: transparent; }
+
+.pfm-button_bare .pfm-button_loader .pfm-button_dot:nth-of-type(1),
+.pfm-button_link .pfm-button_loader .pfm-button_dot:nth-of-type(1),
+.pfm-button_outline .pfm-button_loader .pfm-button_dot:nth-of-type(1) {
+    background-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90); filter: brightness(100%)
+}
+
+.pfm-button_bare .pfm-button_loader .pfm-button_dot:nth-of-type(2),
+.pfm-button_link .pfm-button_loader .pfm-button_dot:nth-of-type(2),
+.pfm-button_outline .pfm-button_loader .pfm-button_dot:nth-of-type(2) {
+    background-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90); filter: brightness(150%)
+}
+
+.pfm-button_bare .pfm-button_loader .pfm-button_dot:nth-of-type(3),
+.pfm-button_link .pfm-button_loader .pfm-button_dot:nth-of-type(3),
+.pfm-button_outline .pfm-button_loader .pfm-button_dot:nth-of-type(3) {
+    background-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90); filter: brightness(200%)
+}
+
+/* danger colors */
+
+.pfm-button_danger.pfm-button .pfm-button_loader { background-color: #a61a14 }
+.pfm-button_danger .pfm-button_loader .pfm-button_dot:nth-of-type(1) { background-color: #FECEA8 }
+.pfm-button_danger .pfm-button_loader .pfm-button_dot:nth-of-type(2) { background-color: #FF847C }
+.pfm-button_danger .pfm-button_loader .pfm-button_dot:nth-of-type(3) { background-color: #E84A5F }
+
+/* success colors */
+
+.pfm-button_success.pfm-button .pfm-button_loader { background-color: #016538 }
+.pfm-button_success .pfm-button_loader .pfm-button_dot:nth-of-type(1) { background-color: #A1C181 }
+.pfm-button_success .pfm-button_loader .pfm-button_dot:nth-of-type(2) { background-color: #3ccc18 }
+.pfm-button_success .pfm-button_loader .pfm-button_dot:nth-of-type(3) { background-color: #46d465 }
+
+/* animation for loader is found in button.css inside the pfm_animation resource */
+
+span + lightning-icon,
+lightning-icon + span {
+    margin-left: .5rem;
+    display: inline-block
+}
+
+.pfm-button.js-load-transition span,
+.pfm-button.js-load-transition .slds-icon_container {
+    opacity: 0;
+    transition: opacity ease-in-out .5s 1s;
+}
+
+
+/*
+========================================================
+    Button Grouped Style
+========================================================
+*/
+
+:host(.pfm-button_grouped) .pfm-button {
+    margin-left: -1px;
+}
+
+:host(.pfm-button_grouped) .pfm-button.pfm-button_default {
+    border-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90);
+}
+
+:host(.pfm-button_grouped) .pfm-button.pfm-button_success {
+    border-color: #016538;
+}
+
+:host(.pfm-button_grouped) .pfm-button.pfm-button_danger {
+    border-color: #a61a14;
+}
+
+:host(.pfm-button_grouped.pfm-theme_brand) .pfm-button.pfm-button_outline {
+    border-color: var(--lwc-colorBackgroundButtonBrandHover, #135F90);
+}
+
+:host(.pfm-button_grouped.pfm-theme_success) .pfm-button.pfm-button_success,
+:host(.pfm-button_grouped.pfm-theme_danger) .pfm-button.pfm-button_danger,
+:host(.pfm-button_grouped.pfm-theme_brand) .pfm-button.pfm-button_default {
+    border-color: var(--lwc-colorBorder, #D4D4D4);
+}
+:host(.pfm-button_grouped) .pfm-button:disabled {
+    border-color: #B5B5B5;
+}
+
+:host(.pfm-button_grouped) .pfm-button.pfm-button_link {
+    margin-left: .5rem;
+}
